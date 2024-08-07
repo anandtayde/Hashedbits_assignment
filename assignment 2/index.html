@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Functions Demonstration</h1>
+        <nav>
+            <ul>
+                <li><a href="#even-numbers">Even Numbers</a></li>
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#tax">Tax Calculator</a></li>
+                <li><a href="#sum-of-products">Sum of Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="even-numbers">
+            <h2>Display Even Numbers from 1 to 100</h2>
+            <button onclick="displayEvenNumbers()">Display Even Numbers</button>
+            <div id="even-numbers-output"></div>
+        </section>
+
+        <section id="calculator">
+            <h2>Calculator</h2>
+            <input type="number" id="calc-n1" placeholder="Number 1">
+            <input type="number" id="calc-n2" placeholder="Number 2">
+            <select id="calc-operation">
+                <option value="add">Add</option>
+                <option value="subtract">Subtract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+            </select>
+            <button onclick="performCalculation()">Calculate</button>
+            <div id="calc-output"></div>
+        </section>
+
+        <section id="tax">
+            <h2>Tax Calculator</h2>
+            <input type="number" id="salary" placeholder="Enter Salary">
+            <button onclick="calculateTax()">Find Tax</button>
+            <div id="tax-output"></div>
+        </section>
+
+        <section id="sum-of-products">
+            <h2>Sum of Products of Corresponding Digits</h2>
+            <input type="number" id="sp-n1" placeholder="Number 1">
+            <input type="number" id="sp-n2" placeholder="Number 2">
+            <button onclick="findSumOfProducts()">Find Sum of Products</button>
+            <div id="sp-output"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 JavaScript Functions. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #E2DAD6, #F5EDED);
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #6482AD, #7FA1C3);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #6482AD;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #7FA1C3;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Exercises</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Q1: Remove States Starting with Vowels</h2>
+            <button onclick="removeVowelStates()">Remove States</button>
+            <pre id="q1-output"></pre>
+        </section>
+
+        <section>
+            <h2>Q2: Reverse Words in String</h2>
+            <button onclick="reverseWords()">Reverse Words</button>
+            <pre id="q2-output"></pre>
+        </section>
+
+        <section>
+            <h2>Q3: Modify Array to Form 'INDONESIA'</h2>
+            <button onclick="modifyString()">Modify String</button>
+            <pre id="q3-output"></pre>
+        </section>
+
+        <section>
+            <h2>Q4: Count Vowels and Consonants</h2>
+            <button onclick="countVowelsConsonants()">Count Vowels and Consonants</button>
+            <pre id="q4-output"></pre>
+        </section>
+
+        <section>
+            <h2>Q5: Replace Wrong Word</h2>
+            <button onclick="replaceWord()">Replace Word</button>
+            <pre id="q5-output"></pre>
+        </section>
+
+        <section>
+            <h2>Q6: Filter Numbers Greater than 5</h2>
+            <button onclick="filterNumbers()">Filter Numbers</button>
+            <pre id="q6-output"></pre>
+        </section>
+
+        <section>
+            <h2>Q7: Calculate Average Scores</h2>
+            <button onclick="calculateAverages()">Calculate Averages</button>
+            <pre id="q7-output"></pre>
+        </section>
+
+        <section>
+            <h2>Q8: Repeated Sum of Digits</h2>
+            <button onclick="findRepeatedSum()">Find Repeated Sum</button>
+            <pre id="q8-output"></pre>
+        </section>
+
+        <section>
+            <h2>Q9: Count Words in Paragraph</h2>
+            <button onclick="countWords()">Count Words</button>
+            <pre id="q9-output"></pre>
+        </section>
+
+        <section>
+            <h2>Q10: Reverse a String</h2>
+            <button onclick="reverseString()">Reverse String</button>
+            <pre id="q10-output"></pre>
+        </section>
+    </main>
+
+    <script>
+        // Q1: Remove states starting with vowels
+        function removeVowelStates() {
+            const states = ["Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"];
+            const filteredStates = states.filter(state => !/^[AEIOUaeiou]/.test(state));
+            document.getElementById('q1-output').innerText = filteredStates.join(', ');
+        }
+
+        // Q2: Reverse words in the string
+        function reverseWords() {
+            let str = 'I love my India';
+            let reversedStr = str.split(' ').reverse().join(' ');
+            document.getElementById('q2-output').innerText = reversedStr;
+        }
+
+        // Q3: Modify array to form 'INDONESIA'
+        function modifyString() {
+            let string = ['I', 'N', 'D', 'I', 'A'];
+            string.splice(4, 1, 'O', 'N', 'E', 'S', 'I', 'A');
+            let result = string.join('');
+            document.getElementById('q3-output').innerText = result;
+        }
+
+        // Q4: Count vowels and consonants in a string
+        function countVowelsConsonants() {
+            const str = "This is an example string with more than twenty characters.";
+            const vowels = str.match(/[aeiou]/gi) || [];
+            const consonants = str.match(/[bcdfghjklmnpqrstvwxyz]/gi) || [];
+            document.getElementById('q4-output').innerText = `Vowels: ${vowels.length}, Consonants: ${consonants.length}`;
+        }
+
+        // Q5: Replace wrong word with correct word in a sentence
+        function replaceWord() {
+            const sentence = "I like apples.";
+            const wrong = "apples";
+            const correct = "oranges";
+            const newSentence = sentence.replace(wrong, correct);
+            document.getElementById('q5-output').innerText = newSentence;
+        }
+
+        // Q6: Filter numbers greater than 5
+        function filterNumbers() {
+            const inputArr = [1, 2, 3, 9, 10, 7, 5, 4, 3];
+            const result = inputArr.filter(num => num > 5);
+            document.getElementById('q6-output').innerText = result.join(', ');
+        }
+
+        // Q7: Calculate average scores
+        function calculateAverages() {
+            const students = [
+                { name: "Ram", scores: [80, 70, 60] },
+                { name: "Mohan", scores: [80, 70, 90] },
+                { name: "Sai", scores: [60, 70, 80] },
+                { name: "Hemang", scores: [90, 90, 80, 80] },
+            ];
+            const result = students.map(student => {
+                const average = student.scores.reduce((a, b) => a + b, 0) / student.scores.length;
+                return { name: student.name, average: Math.round(average) };
+            });
+            document.getElementById('q7-output').innerText = JSON.stringify(result, null, 2);
+        }
+
+        // Q8: Find repeated sum of digits until single digit
+        function findRepeatedSum() {
+            function sumDigits(num) {
+                return num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            }
+
+            let number = 456;
+            while (number >= 10) {
+                number = sumDigits(number);
+            }
+
+            document.getElementById('q8-output').innerText = number;
+        }
+
+        // Q9: Count words in a paragraph
+        function countWords() {
+            const paragraph = "This is a sample paragraph with several words to count.";
+            const wordCount = paragraph.split(/\s+/).length;
+            document.getElementById('q9-output').innerText = `Word Count: ${wordCount}`;
+        }
+
+        // Q10: Reverse a string
+        function reverseString() {
+            const input = "Hello";
+            const reversed = input.split('').reverse().join('');
+            document.getElementById('q10-output').innerText = reversed;
+        }
+    </script>
+</body>
+</html>

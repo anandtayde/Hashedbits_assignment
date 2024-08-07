@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #393E46, #222831);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #EEEEEE;
+        }
+
+        .booking-form {
+            background: #222831;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #00ADB5;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #EEEEEE;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #D3D6DB;
+            border-radius: 4px;
+            background-color: hsl(0, 0%, 100%);
+            color: #222831;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #00ADB5;
+            color: #222831;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #EEEEEE;
+            color: #00ADB5;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-form">
+        <h1>Book Your Seat</h1>
+        <form id="booking-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mobile">Mobile</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            localStorage.setItem('bookingDetails', JSON.stringify({ name, email, mobile }));
+            location.href = 'page4.html';
+        });
+    </script>
+</body>
+</html>

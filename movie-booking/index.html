@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #393E46, #222831);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            color: #EEEEEE;
+        }
+
+        header, footer {
+            background-color: #222831;
+            color: #EEEEEE;
+            padding: 10px 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        header h1, footer p {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #00ADB5;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #EEEEEE;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .movies-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .movie {
+            background: linear-gradient(135deg, #00ADB5, #393E46);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: #EEEEEE;
+        }
+
+        .movie img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .movie:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .movie p {
+            margin: 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Movie Ticket Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="movies-container" id="movies">
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="1.jpg" alt="Movie 1">
+                <p>Movie 1</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="2.jpg" alt="Movie 2">
+                <p>Movie 2</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="3.jpg" alt="Movie 3">
+                <p>Movie 3</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="5.jpg" alt="Movie 4">
+                <p>Movie 4</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="6.jpg" alt="Movie 5">
+                <p>Movie 5</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="7.jpg" alt="Movie 6">
+                <p>Movie 6</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="8.jpg" alt="Movie 7">
+                <p>Movie 7</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="9.jpg" alt="Movie 8">
+                <p>Movie 8</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="10.jpg" alt="Movie 9">
+                <p>Movie 9</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="11.jpg" alt="Movie 10">
+                <p>Movie 10</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="13.jpg" alt="Movie 11">
+                <p>Movie 11</p>
+            </div>
+            <div class="movie" onclick="location.href='page2.html'">
+                <img src="13.jpg" alt="Movie 12">
+                <p>Movie 12</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Movie Ticket Booking. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

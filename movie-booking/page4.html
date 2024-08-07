@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #393E46, #222831);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #EEEEEE;
+        }
+
+        .confirmation {
+            background: #222831;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00ADB5;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #EEEEEE;
+        }
+
+        .booking-id {
+            font-weight: bold;
+            color: #00ADB5;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation">
+        <h1>Booking Confirmed</h1>
+        <p>Your booking ID is: <span class="booking-id" id="booking-id"></span></p>
+        <p>Name: <span id="name"></span></p>
+        <p>Email: <span id="email"></span></p>
+        <p>Mobile: <span id="mobile"></span></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bookingDetails = JSON.parse(localStorage.getItem('bookingDetails'));
+            if (bookingDetails) {
+                document.getElementById('booking-id').textContent = Math.floor(Math.random() * 1000000);
+                document.getElementById('name').textContent = bookingDetails.name;
+                document.getElementById('email').textContent = bookingDetails.email;
+                document.getElementById('mobile').textContent = bookingDetails.mobile;
+            }
+        });
+    </script>
+</body>
+</html>
